@@ -1,3 +1,8 @@
+# Creator
+Nama: Nanang Ardiansyah
+NIM: V3423064
+Kelas: TI-C
+
 # join-system-vue-yarn
 
 This template should help get you started developing with Vue 3 in Vite.
@@ -37,3 +42,6 @@ yarn build
 ```sh
 yarn lint
 ```
+
+# Tampilan Website
+![Screenshot halaman utama](/src/assets/images/web/landing.png)

@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <nav class="top-0 left-0 right-0 px-12 w-full h-[80px] bg-x-black flex items-center justify-between z-50">
+  <nav class="fixed top-0 left-0 right-0 px-12 w-full h-[80px] bg-x-black flex items-center justify-between z-50">
     <router-link to="/"><img src="@/assets/images/logo/logo-join-sistem.png" alt="Join Sistem Logo"></router-link>
     <div class="hidden lg:block justify-center">
       <ul class="flex flex-col lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
@@ -37,4 +37,5 @@
       </span>
     </button>
   </nav>
+  <div class="h-[80px]"></div>
 </template>
