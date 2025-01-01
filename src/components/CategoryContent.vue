@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <div class="container">
+    <div class="container justify-center mx-auto">
         <div class="flex flex-row justify-center font-sans categories max-md:px-5 max-md:mt-10">
             <router-link to="/category">
                 <div

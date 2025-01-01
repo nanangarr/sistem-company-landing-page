@@ -217,7 +217,7 @@ const prevSlide = () => {
       </div>
 
       <!--LOGO IPSUM-->
-      <div class="flex flex-row-5 mt-32">
+      <div class="flex flex-row-5 mt-32 justify-center mx-auto">
         <div class="flex flex-col ml-3.5 mr-9">
           <span class="text-sm leading-5 text-x-mediumgrey">We Are</span>
           <span class="text-2xl leading-8 text-x-mediumgrey font-bold">Featured In</span>
@@ -243,7 +243,7 @@ const prevSlide = () => {
 
       <!--NEXT dan PREV-->
 
-      <div class="flex flex-row w-full h-[464px] bg-x-lightyellow mt-32 gap-20 relative">
+      <div class="flex flex-row w-full h-[464px] bg-x-lightyellow mt-32 gap-20 relative justify-center mx-auto">
         <div class="flex flex-col mt-[92px] ml-[112px] w-[349px] h-[200px]">
           <h6 class="tracking-[3px] font-semibold text-base leading-5">TESTIMONIAL</h6>
           <h2 class="mt-5 font-bold text-4xl leading-[48px] tracking-[-2px]">

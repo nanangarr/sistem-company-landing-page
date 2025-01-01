@@ -4,7 +4,7 @@ import SosmedContent from '@/components/SosmedContent.vue';
 </script>
 
 <template>
-    <div class="flex flex-row-4 leading-none">
+    <div class="flex flex-row-4 leading-none justify-center mx-auto">
         <router-link to="/authorview" class="flex flex-col self-center px-12 py-10 mr-8 w-[253px] bg-x-lightgrey hover:bg-x-lightyellow">
             <img src="/src/assets/images/isian/pexels-vazhnik-7562313.jpg" alt="Profile photo of Floyd Miles"
                 class="object-cover w-32 self-center rounded-full aspect-square" />
