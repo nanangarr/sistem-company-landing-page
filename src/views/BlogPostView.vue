@@ -10,7 +10,7 @@ import MainLayout from '@/layouts/MainLayout.vue'
         <div class="flex px-4 md:px-8 lg:px-[336px]">
             <div class="flex flex-col mt-8 md:mt-16 lg:mt-32 w-full">
                 <div class="flex gap-4 items-start self-start">
-                    <img src="/src/assets/images/isian/Orang1.png" alt=""
+                    <img src="/src/assets/images/isian/orang1.png" alt=""
                         class="object-contain w-10 h-10 md:w-12 md:h-12 rounded-full aspect-square">
                     <div class="mt-1">
                         <h2 class="text-x-yellow text-2xl md:text-3xl font-bold tracking-tighter leading-none">Andrew
