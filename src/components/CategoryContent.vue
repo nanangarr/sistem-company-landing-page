@@ -1,70 +1,53 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
+const categories = ref([
+    {
+        title: "Business",
+        description: "Provides faster Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+        icon: new URL('@/assets/images/icon/icon.png', import.meta.url).href,
+        path: "/category"
+    },
+    {
+        title: "StartUp",
+        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+        icon: new URL('@/assets/images/icon/icon-1.png', import.meta.url).href,
+        path: "/category"
+    },
+    {
+        title: "Economy",
+        description: "Provides faster Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+        icon: new URL('@/assets/images/icon/icon-2.png', import.meta.url).href,
+        path: "/category"
+    },
+    {
+        title: "Technology",
+        description: "Provides faster Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+        icon: new URL('@/assets/images/icon/icon-3.png', import.meta.url).href,
+        path: "/category"
+    }
+]);
 </script>
 
 <template>
-    <div class="container justify-center mx-auto">
-        <div class="flex flex-row justify-center font-sans categories max-md:px-5 max-md:mt-10">
-            <router-link to="/category">
-                <div
-                    class="relative w-[296px] h-[228px] mr-8 border border-solid border-gray-200 transition-all duration-500 col-span-12 hover:bg-x-blue group xl:p-7 lg:col-span-3 md:col-span-6 ">
-                    <div class="inline-flex items-center justify-center mb-4 h-14 w-14 rounded-lg bg-x-lightyellow ">
-                        <img src="@/assets/images/icon/icon.png" alt="">
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <router-link v-for="(category, index) in categories" :key="index" :to="category.path" class="block h-full">
+                <div class="h-full border border-gray-200 transition-all duration-300 hover:bg-x-blue group p-5 xl:p-7">
+                    <div
+                        class="inline-flex items-center justify-center mb-4 h-12 w-12 sm:h-14 sm:w-14 rounded-lg bg-x-lightyellow">
+                        <img :src="category.icon" :alt="category.title" class="w-6 sm:w-8">
                     </div>
                     <h4
-                        class="text-2xl font-bold text-black group-hover:text-white mb-2 capitalize transition-all duration-500 ">
-                        Business
+                        class="text-xl sm:text-2xl font-bold text-black group-hover:text-white mb-2 capitalize transition-all duration-300">
+                        {{ category.title }}
                     </h4>
                     <p
-                        class="text-sm font-normal text-x-mediumgrey group-hover:text-white transition-all duration-500 leading-5 ">
-                        Provides
-                        faster
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+                        class="text-sm font-normal text-x-mediumgrey group-hover:text-white transition-all duration-300 leading-relaxed">
+                        {{ category.description }}
+                    </p>
                 </div>
             </router-link>
-
-            <div
-                class="relative w-[296px] h-[228px] mr-8 border border-solid border-gray-200 transition-all duration-500 col-span-12 hover:bg-x-blue group  xl:p-7 lg:col-span-3 md:col-span-6 ">
-                <div class="inline-flex items-center justify-center mb-4 h-14 w-14 rounded-lg bg-x-lightyellow ">
-                    <img src="@/assets/images/icon/icon-1.png" alt="">
-                </div>
-                <h4
-                    class="text-2xl font-bold text-black group-hover:text-white mb-2 capitalize transition-all duration-500 ">
-                    StartUp</h4>
-                <p
-                    class="text-sm font-normal text-x-mediumgrey group-hover:text-white transition-all duration-500 leading-5 ">
-                    Lorem ipsum
-                    dolor
-                    sit
-                    amet, consectetuer adipiscing elit. </p>
-            </div>
-
-            <div
-                class="relative w-[296px] h-[228px] mr-8 border border-solid border-gray-200 transition-all duration-500 col-span-12  hover:bg-x-blue group xl:p-7 lg:col-span-3 md:col-span-6 ">
-                <div class="inline-flex items-center justify-center mb-4 h-14 w-14 rounded-lg bg-x-lightyellow ">
-                    <img src="@/assets/images/icon/icon-2.png" alt="">
-                </div>
-                <h4
-                    class="text-2xl font-bold text-black group-hover:text-white mb-2 capitalize transition-all duration-500 ">
-                    Economy</h4>
-                <p
-                    class="text-sm font-normal text-x-mediumgrey group-hover:text-white transition-all duration-500 leading-5 ">
-                    Provides faster
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
-            </div>
-
-            <div
-                class="relative w-[296px] h-[228px] border border-solid border-gray-200 transition-all duration-500 col-span-12  hover:bg-x-blue group xl:p-7 lg:col-span-3 md:col-span-6 ">
-                <div class="inline-flex items-center justify-center mb-4 h-14 w-14 rounded-lg bg-x-lightyellow ">
-                    <img src="@/assets/images/icon/icon-3.png" alt="">
-                </div>
-                <h4
-                    class="text-2xl font-bold text-black group-hover:text-white mb-2 capitalize transition-all duration-500 ">
-                    Technology</h4>
-                <p
-                    class="text-sm font-normal text-x-mediumgrey group-hover:text-white transition-all duration-500 leading-5 ">
-                    Provides faster
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
-            </div>
         </div>
     </div>
 </template>

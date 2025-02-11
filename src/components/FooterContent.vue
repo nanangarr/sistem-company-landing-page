@@ -1,66 +1,57 @@
-<script setup lang="ts"> 
+<script setup lang="ts">
 import SosmedContent from '@/components/SosmedContent.vue';
+import { ref } from 'vue';
+
+const menuItems = ref([
+  { name: 'Home', path: '/' },
+  { name: 'Blog', path: '/blog' },
+  { name: 'About Us', path: '/about' },
+  { name: 'Contact Us', path: '/contact' },
+  { name: 'Privacy Policy', path: '/privacy' }
+]);
 </script>
 
 <template>
-  <footer class="w-full bg-x-black p-8 mt-[59px] max-md:px-5 max-md:mt-10">
-    <div class="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-center md:justify-between">
-      <router-link to="/"><span class="text-3xl text-white">{Finsweet</span></router-link>
+  <footer class="w-full bg-x-black p-8 mt-[59px] max-md:p-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <router-link to="/" class="justify-self-center md:justify-self-start">
+        <span class="text-3xl text-white">{Finsweet</span>
+      </router-link>
 
-        <ul class="flex flex-wrap items-center gap-y-2 gap-x-8">
-          <li>
-            <router-link to="/"><a href="#" class="text-white hover:text-slate-500 focus:text-slate-500 text-base">
-                Home
-              </a></router-link>
-          </li>
-          <li>
-            <router-link to="/blog"><a href="#" class="text-white hover:text-slate-500 focus:text-slate-500 text-base">
-                Blog
-              </a></router-link>
-          </li>
-          <li>
-            <router-link to="/about"><a href="#" class="text-white hover:text-slate-500 focus:text-slate-500 text-base">
-                About Us
-              </a></router-link>
-          </li>
-          <li>
-            <router-link to="/contact"><a href="#"
-                class="text-white hover:text-slate-500 focus:text-slate-500 text-base">
-                Contact Us
-              </a></router-link>
-          </li>
-          <li>
-            <router-link to="/privacy"><a href="#"
-                class="text-white hover:text-slate-500 focus:text-slate-500 text-base">
-                Privacy Policy
-              </a></router-link>
-          </li>
-        </ul>
+      <ul class="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6">
+        <li v-for="item in menuItems" :key="item.name">
+          <router-link :to="item.path">
+            <a class="text-white hover:text-slate-500 focus:text-slate-500 text-base whitespace-nowrap">
+              {{ item.name }}
+            </a>
+          </router-link>
+        </li>
+      </ul>
     </div>
-    <div class="flex flex-col-2 mt-14 w-full h-64 bg-x-mediumgrey bg-opacity-50">
-      <span class="flex font-bold text-3xl ml-16 w-[45%] items-center justify-center text-white md:text-3xl">Subscribe
-        to our
-        news letter to
-        get latest updates and news</span>
-      <div class="flex items-center max-w-lg ml-10 max-md:max-w-lg ">
-        <div class="w-full max-w-sm min-w-[260px]">
-          <input
-            class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 px-3 py-2"
-            placeholder="Enter Your Email">
-        </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-14 p-8 bg-x-mediumgrey bg-opacity-50">
+      <span class="text-2xl md:text-3xl font-bold text-white text-center md:text-left">
+        Subscribe to our news letter to get latest updates and news
+      </span>
+
+      <div class="flex flex-col sm:flex-row items-center gap-6">
+        <input
+          class="w-full bg-transparent placeholder:text-slate-400 text-white text-sm border border-slate-200 px-4 py-3"
+          placeholder="Enter Your Email">
         <button type="submit"
-          class="inline-flex items-center py-2.5 px-3 ms-2 text-sm font-medium text-white bg-blue-700 border-blue-700 hover:bg-blue-800 ">
+          class="w-full sm:w-auto inline-flex justify-center items-center py-3 px-8 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800">
           Subscribe
         </button>
       </div>
     </div>
-    <div class="grid grid-cols-2">
-      <div class="flex flex-col mt-8 text-x-mediumgrey">
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8">
+      <div class="flex flex-col text-x-mediumgrey gap-4 text-center sm:text-left">
         <span class="text-base">Finstreet 118 2561 Fintown</span>
         <span class="text-base">Hello@finsweet.com 020 7993 2905</span>
       </div>
-      <div class="flex justify-end mt-8 mr-2">
-        <SosmedContent/>
+      <div class="flex justify-center sm:justify-end">
+        <SosmedContent />
       </div>
     </div>
   </footer>
