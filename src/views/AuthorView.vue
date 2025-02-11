@@ -4,13 +4,13 @@ import MainLayout from '@/layouts/MainLayout.vue';
 
 const blogPosts = [
     {
-        image: '@/assets/images/isian/mypost-1.png',
+        image: '/src/assets/images/isian/mypost-1.png',
         category: 'BUSINESS',
         title: 'Font sizes in UI design: The complete guide to follow',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     {
-        image: '@/assets/images/isian/mypost-3.png',
+        image: '/src/assets/images/isian/mypost-3.png',
         category: 'ECONOMY',
         title: 'How to build rapport with your web design clients',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
@@ -23,7 +23,7 @@ const blogPosts = [
         <!-- Author Hero Section -->
         <section class="relative w-full min-h-[550px] bg-x-lavender px-4 md:px-0">
             <div class="flex flex-col md:flex-row md:px-[208px] py-16 md:py-32">
-                <img src="@/assets/images/isian/author.png"
+                <img src="/src/assets/images/isian/author.png"
                     class="object-contain w-[200px] md:w-[251px] mx-auto md:mx-0" />
                 <div class="flex flex-col mt-8 md:mt-0 md:ml-8">
                     <h2
